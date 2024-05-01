@@ -17,7 +17,15 @@
 				<li><a href="https://www.linkedin.com/in/rohit-vardhan-battula-1a704a210/">About Me</a></li>
 				<li><a href="https://github.com/rohitvardhanbattula?tab=repositories">Projects</a></li>
 				<li><a href="https://www.linkedin.com/in/rohit-vardhan-battula-1a704a210/details/skills/">Skills</a></li>
-				<li><a href="tel:630-096-215-6">Call</a> </li>
+				<li><a href="tel:630-096-215-6">Contact
+					<select name="Contact" onchange="document.getElementById(this.value).style.display='block';document.getElementById(this.value=='phone'?'email':'phone').style.display='none';">
+					<option value="phone">Phone</option>
+					<option value="email">Email</option>
+				  </select>
+				  
+				  <div id="phone" style="display:none;"><a href="tel:630-096-215-6">630-096-215-6</a></div>
+				  <div id="email" style="display:none;"><a href="mailto:example@example.com">example@example.com</a></div>
+				  </a> </li>
 			</ul>
 		</nav>
 		<div class="content">
