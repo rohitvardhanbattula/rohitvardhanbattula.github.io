@@ -1,5 +1,4 @@
-// THEME TOGGLE
-
+// ========== THEME TOGGLE ==========
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
 const icon = toggleBtn.querySelector("i");
@@ -16,8 +15,7 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-// CUSTOM CURSOR
-
+// ========== CUSTOM CURSOR ==========
 const cursor = document.getElementById("cursor");
 
 window.addEventListener("mousemove", (e) => {
@@ -25,7 +23,8 @@ window.addEventListener("mousemove", (e) => {
   cursor.style.top = e.clientY + "px";
 });
 
-// CONTACT FORM VALIDATION + EMAILJS SENDING
+// ========== CONTACT FORM VALIDATION & EMAILJS ==========
+emailjs.init("_bflkLf_B-dSqWcK4"); // Your EmailJS Public Key
 
 const form = document.getElementById("contact-form");
 const formMessage = document.getElementById("form-message");
@@ -39,6 +38,7 @@ form.addEventListener("submit", (e) => {
     message: form.message.value.trim(),
   };
 
+  // Simple Validation
   if (!data.name || !data.email || !data.message) {
     formMessage.textContent = "Please fill out all fields.";
     formMessage.style.color = "#ff6666";
@@ -52,29 +52,23 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
+  // Sending Message
   formMessage.textContent = "Sending message...";
   formMessage.style.color = "var(--accent)";
+  const submitBtn = form.querySelector("button[type='submit']");
+  submitBtn.disabled = true;
 
-  fetch("https://script.google.com/macros/s/AKfycbwWCY-1R6VTohoySQQ1RRhu6QpSWNg8wM3tJOXmGRipFWVBcwnbWK1cc_NCZDtNcrPBfA/exec", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      if (result.status === "success") {
-        formMessage.textContent = "Thank you for contacting me!";
-        formMessage.style.color = "#00e676";
-        form.reset();
-      } else {
-        formMessage.textContent = "Failed to send message. Please try again later.";
-        formMessage.style.color = "#ff6666";
-      }
+  emailjs.send("service_77xngdk", "template_alo40hg", data)
+    .then(() => {
+      formMessage.textContent = "✅ Thank you for contacting me!";
+      formMessage.style.color = "#00e676";
+      form.reset();
+      submitBtn.disabled = false;
     })
-    .catch(() => {
-      formMessage.textContent = "Failed to send message. Please check your connection.";
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      formMessage.textContent = "❌ Failed to send message. Please try again later.";
       formMessage.style.color = "#ff6666";
+      submitBtn.disabled = false;
     });
 });
