@@ -1,120 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Portfolio website</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rohit Vardhan Portfolio</title>
+
+  <!-- SEO & Social -->
+  <meta name="description" content="Rohit Vardhan - Software Engineer Portfolio, projects, skills, and contact" />
+  <meta property="og:title" content="Rohit Vardhan Portfolio" />
+  <meta property="og:description" content="Software Engineer portfolio showcasing projects, skills, experience, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rohitvardhanbattula.github.io/" />
+  <meta property="og:image" content="img/image.jpg" />
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
 
 </head>
+
 <body>
+	<script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
 
-	<div class="h">
-		<nav>
-			<img width="70" height="70" src='P.jpeg'>
-			<h2 class="logo">PoRtF<span>oLi0</span></h2>
-			<ul>
-				<li><a href="https://rohitvardhanbattula.github.io/">Home</a></li>
-				<li><a href="https://www.linkedin.com/in/rohit-vardhan-battula-1a704a210/">About Me</a></li>
-				<li><a href="https://github.com/rohitvardhanbattula?tab=repositories">Projects</a></li>
-				<li><a href="https://www.linkedin.com/in/rohit-vardhan-battula-1a704a210/details/skills/">Skills</a></li>
-				<li>
-					<select name="contact" onchange="document.getElementById(this.value).style.display='block';document.getElementById(this.value=='phone'?'email':'phone').style.display='none';">
-						<option value="phone">Phone</option>
-						<option value="email">Email</option>
-					  </select>
-					  
-					  <div id="phone" style="display:none;"><a href="tel:630-096-215-6">Click Here</a></div>
-					  <div id="email" style="display:none;"><a href="mailto:vardhanbattula03@gmail.com">Click here</a></div>
-					  </li>
-			</ul>
-		</nav>
-		<div class="content">
-			<h4>Hello, my name is</h4>
-			<h1>Rohit <span>Vardhan</span></h1>
-			<h3>I am an Achi<span>ever.</span></h3>
-			
-		</div>
-		
-	</div>
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
 
-	<div class="about">
-		<div class="main">
-			<img src="img/image.jpg">
-			<div class="about-text">
-				<h2>My Blog</h2>
-				<h5>Dreamer <span>& Learner</span></h5>
-				<p>This blog is all about a student named Rohit.If you wanna learn something new,this website is sure a cup of tea for you.The learning ability is more important here in this case </p>
-				<div>
-				<a href="https://wa.link/tn3tuu"><button><span2>Chat with us</span2></button></a>
-			</div>
-			</div>
-		</div>
-	</div>
+  <header>
+    <nav class="nav-container">
+      <h2 class="logo">
+        <span>Portfolio.</span>
+      </h2>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="https://www.linkedin.com/in/rohit-vardhan-battula-1a704a210/details/skills/" class="nav-link">Skills</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle dark and light mode">
+          <i class="fas fa-moon"></i>
+        </button></li>
+      </ul>
+    </nav>
+  </header>
 
-	<div>
-		<div class="title">
-			<h2><span1>Projects</span1> </h2>
-		</div>
+  <main id="home">
+    <section class="hero-section">
+      <div class="hero-content">
+        <h4>Hello, my name is</h4>
+        <h1>Rohit <span>Vardhan</span></h1>
+        <h3>Software Engineer | Problem Solver | Learner</h3>
+        <a href="assets/Rohit_Vardhan_Resume.pdf" download class="btn resume-btn">Download Resume</a>
+      </div>
+    </section>
 
-		<div class="box">
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="img/image.jpg" alt="Rohit Vardhan" class="about-img" />
+        <div class="about-text">
+          <h5>Visionary <span>& Enthusiast</span></h5>
+          <p>I am Rohit, a passionate software engineer committed to continuous learning and delivering efficient
+            solutions. I thrive in collaborative environments and enjoy tackling challenging problems.</p>
+          <a href="https://wa.link/tn3tuu" class="btn chat-btn">Chat with me</a>
+        </div>
+      </div>
+    </section>
 
-			<div class="card">
-				<i class="fas fa-user"></i>
-				<h3>Social Media Fake Profile Detection</h3>
-				<div class="pra">
-					<p>Detecting fake social media profiles with ML algorithms.</p>
 
-					<p style="text-align: center;">
-						<a class="button" href="https://github.com/rohitvardhanbattula/Flask-Profile-Detection">Click for Code</a>
-					</p>
-				</div>
-			</div>
-			<div class="card">
-				<i class="fas fa-globe"></i>
-				<h3>Travel App</h3>
-				<div class="pra">
-					<p>An app to find the nearby hotels,restaurants and attractions using APIs.</p>
+    <section id="experience" class="experience-section">
+      <h2>Professional Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Software Engineer at The Hackett Group</h3>
+          <span class="timeline-date">[Your Start Date] – Present</span>
+          <p>Contributing to innovative solutions by developing and optimizing enterprise software applications.
+            Working collaboratively in agile teams to deliver quality results and improve business processes.</p>
+        </div>
+      </div>
+    </section>
 
-					<p style="text-align: center;">
-						<a class="button" href="https://github.com/rohitvardhanbattula/Travel-app">Click for Code</a>
-					</p>
-				</div>
-			</div>
-			<div class="card">
-				<i class="fas fa-address-book"></i>
-				<h3>Address Book</h3>
-				<div class="pra">
-					<p>Creating the contacts of people as per the required fields.</p>
+    <section id="projects" class="projects-section">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <article class="project-card">
+          <i class="fas fa-user project-icon"></i>
+          <h3>Social Media Fake Profile Detection</h3>
+          <p>Detecting fake social media profiles with ML algorithms.</p>
+          <a href="https://github.com/rohitvardhanbattula/Flask-Profile-Detection" target="_blank" class="btn btn-outline">View Code</a>
+        </article>
+        <article class="project-card">
+          <i class="fas fa-globe project-icon"></i>
+          <h3>Travel App</h3>
+          <p>An app to find the nearby hotels, restaurants and attractions using APIs.</p>
+          <a href="https://github.com/rohitvardhanbattula/Travel-app" target="_blank" class="btn btn-outline">View Code</a>
+        </article>
+        <article class="project-card">
+          <i class="fas fa-address-book project-icon"></i>
+          <h3>Address Book</h3>
+          <p>Creating the contacts of people as per the required fields.</p>
+          <a href="https://github.com/rohitvardhanbattula/AddressBook" target="_blank" class="btn btn-outline">View Code</a>
+        </article>
+        <article class="project-card">
+          <i class="fas fa-th project-icon"></i>
+          <h3>Wordle</h3>
+          <p>Creating wordle game with valid tries and valid words.</p>
+          <a href="https://github.com/rohitvardhanbattula/wordle" target="_blank" class="btn btn-outline">View Code</a>
+        </article>
+      </div>
+    </section>
 
-					<p style="text-align: center;">
-						<a class="button" href="https://github.com/rohitvardhanbattula/AddressBook">Click for Code</a>
-					</p>
-				</div>
-			</div>
+    <section id="contact" class="contact-section">
+      <h2>Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name<span aria-hidden="true">*</span></label>
+        <input type="text" id="name" name="name" required aria-required="true" />
+        <label for="email">Email<span aria-hidden="true">*</span></label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+        <label for="message">Message<span aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+        <button type="submit" class="btn submit-btn">Send Message</button>
+        <p id="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
 
-			<div class="card">
-				<i class="fa fa-th"></i>
-				<h3>Wordle</h3>
-				<div class="pra">
-					<p>Creating wordle game with valid tries and valid words.</p>
+  <footer>
+    <p>© Rohit Vardhan</p>
+    <p>For more information, click on the icons below:</p>
+    <div class="social">
+      <a href="https://www.facebook.com/rohit.vardhan.7737/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/nameisrohit_08/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/RohitVardhan08" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/rohit-vardhan-battula-1a704a210/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
 
-					<p style="text-align: center;">
-						<a class="button" href="https://github.com/rohitvardhanbattula/wordle">Click for Code</a>
-					</p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<footer>
-		<p>Rohit Vardhan</p>
-		<p>For more Information, click on the icons given below :</p>
-		<div class="social">
-			<a href="https://www.facebook.com/rohit.vardhan.7737/"><i class="fab fa-facebook-f"></i></a>
-			<a href="https://www.instagram.com/nameisrohit_08/"><i class="fab fa-instagram"></i></a>
-			<a href="https://twitter.com/RohitVardhan08"><i class="fab fa-twitter"></i></a>
-		</div>
-	</footer>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
