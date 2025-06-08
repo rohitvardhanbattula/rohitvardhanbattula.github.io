@@ -16,34 +16,6 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
-// SKILLS ANIMATION ON SCROLL
-
-const skills = document.querySelectorAll(".skill-level");
-
-function animateSkills() {
-  skills.forEach((skill) => {
-    const level = skill.getAttribute("data-level");
-    skill.style.width = level;
-  });
-}
-
-// Trigger when skills section is visible
-
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top <= window.innerHeight &&
-    rect.bottom >= 0
-  );
-}
-
-window.addEventListener("scroll", () => {
-  const skillsSection = document.querySelector(".skills-section");
-  if (isInViewport(skillsSection)) {
-    animateSkills();
-  }
-});
-
 // CUSTOM CURSOR
 
 const cursor = document.getElementById("cursor");
