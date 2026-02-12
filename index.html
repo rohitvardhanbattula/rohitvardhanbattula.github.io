@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rohit Vardhan Battula | Software Engineer Portfolio</title>
+  <title>Rohit Vardhan Battula | Software Engineer</title>
   <meta name="description" content="Portfolio of Rohit Vardhan Battula, Software Engineer specializing in AI Infrastructure, MCP, and Full-Stack Development." />
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <div id="cursor"></div>
 
   <header>
     <nav class="nav-container">
@@ -23,7 +19,6 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
         <li><button id="theme-toggle"><i class="fas fa-moon"></i></button></li>
       </ul>
     </nav>
@@ -31,151 +26,120 @@
 
   <main>
     <section id="home" class="hero-section">
-      <div class="hero-content">
-        <h4 class="fade-in">Building the bridge between LLMs and Enterprise Data</h4>
-        <h1>Rohit <span>Vardhan</span> Battula</h1>
-        <h3>Full-Stack Engineer | MCP Architect | M.Tech @ BITS Pilani</h3>
-        <p>Specializing in <strong>Java (Spring Boot)</strong>, <strong>Go</strong>, and <strong>Node.js</strong> to build high-concurrency enterprise ecosystems.</p>
-        <div class="hero-btns">
-            <a href="Rohit_Vardhan_Battula_Resume.pdf" download class="btn resume-btn">Download Full CV</a>
-            <a href="#projects" class="btn btn-outline">Explore My Work</a>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h4 class="badge">Building Enterprise AI Infrastructure</h4>
+          <h1>Rohit <span>Vardhan</span> Battula</h1>
+          <h3>Full-Stack Engineer | MCP Architect | M.Tech @ BITS Pilani</h3>
+          <p>Engineering high-concurrency ecosystems with <strong>Java (Spring Boot)</strong>, <strong>Go</strong>, and <strong>Node.js</strong>.</p>
+          <div class="hero-btns">
+            <a href="Rohit_Vardhan_Battula_Resume.pdf" download class="btn resume-btn">Download Resume</a>
+            <a href="#projects" class="btn btn-outline">View Projects</a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="stats-bar">
+      <div class="container stats-grid">
+        <div class="stat-item"><h3>700+</h3><p>DSA Solved</p></div>
+        <div class="stat-item"><h3>1.5+</h3><p>Years Exp</p></div>
+        <div class="stat-item"><h3>9.09</h3><p>B.E. CGPA</p></div>
+        <div class="stat-item"><h3>402</h3><p>State Rank</p></div>
       </div>
     </section>
 
     <section id="about" class="about-section">
       <div class="container">
-        <div class="about-grid">
-          <div class="about-text">
-            <h2>About Me</h2>
-            <p>I am a Software Engineer with 1.5+ years of experience in architecting robust backend systems[cite: 4, 15]. My expertise lies in <strong>Model Context Protocol (MCP)</strong>, where I design servers that allow Large Language Models to interact securely with on-premise data.</p>
-            <p>I am a relentless problem solver, having solved over <strong>700 Data Structures & Algorithms</strong> problems on platforms like LeetCode and GeeksforGeeks[cite: 6, 30].</p>
+        <div class="about-flex">
+          <div class="about-image">
+             <img src="img/image.jpg" alt="Rohit Vardhan">
           </div>
-          <div class="stats-grid">
-            <div class="stat-card"><h3>700+</h3><p>DSA Solved</p></div>
-            <div class="stat-card"><h3>1.5+</h3><p>Years Exp.</p></div>
-            <div class="stat-card"><h3>9.09</h3><p>B.E. CGPA</p></div>
-            <div class="stat-card"><h3>402</h3><p>State Rank</p></div>
+          <div class="about-text">
+            <h2>Architecting Secure <span>Solutions</span></h2>
+            <p>I specialize in <strong>Model Context Protocol (MCP)</strong>, designing servers that bridge LLMs with secure on-premise data.</p>
+            <p>Currently pursuing an <strong>M.Tech in Software Engineering</strong> at <strong>BITS Pilani</strong> to further deepen my architectural expertise.</p>
+            <div class="skills-mini">
+                <span><i class="fab fa-java"></i> Java</span>
+                <span><i class="fab fa-golang"></i> Go</span>
+                <span><i class="fab fa-node-js"></i> Node.js</span>
+                <span><i class="fab fa-react"></i> React</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="experience-section grey-bg">
+    <section id="experience" class="experience-section">
       <div class="container">
         <h2 class="section-title">Professional Journey</h2>
         <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="card-header">
               <h3>Software Engineer</h3>
-              <span class="company">The Hackett Group | Hyderabad, India</span>
+              <span class="company">The Hackett Group</span>
               <span class="date">Aug 2024 – Present</span>
-              <ul>
-                <li>Engineered an <strong>MCP Server</strong> using Node.js to bridge LLMs with on-premise systems for context-aware AI interactions[cite: 17].</li>
-                <li>Architected a <strong>Vendor Portal</strong> utilizing Go and Java (Spring Boot) for high-concurrency transaction processing[cite: 18].</li>
-                <li>Boosted backend efficiency by <strong>25%</strong> through concurrent execution patterns in Go[cite: 19].</li>
-                <li>Implemented JWT authentication and RBAC for sensitive financial data integrity[cite: 20].</li>
-              </ul>
             </div>
+            <ul>
+              <li>Engineered an <strong>MCP Server</strong> using Node.js for real-time, context-aware AI interactions.</li>
+              <li>Architected a <strong>Vendor Portal</strong> in Go/Java optimizing for 500+ monthly active users.</li>
+              <li>Enhanced backend efficiency by <strong>25%</strong> via Go concurrency patterns.</li>
+              <li>Implemented <strong>JWT & RBAC</strong> for secure financial data handling.</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="education" class="education-section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="edu-grid">
-                <div class="edu-card">
-                    <i class="fas fa-university"></i>
-                    <h3>M.Tech in Software Engineering</h3>
-                    <p><strong>BITS Pilani</strong> (WILP)</p>
-                    <span>Expected Jul 2027</span>
-                </div>
-                <div class="edu-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>B.E. in Computer Science</h3>
-                    <p><strong>Osmania University</strong></p>
-                    <p>CGPA: 9.09</p>
-                    <span>Jun 2024</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills-section grey-bg">
-        <div class="container">
-            <h2>Technical Mastery</h2>
-            <div class="skills-wrapper">
-                <div class="skill-group">
-                    <h4><i class="fas fa-code"></i> Languages</h4>
-                    <ul><li>Java (Spring Boot)</li><li>Go (Golang)</li><li>C++</li><li>JavaScript</li><li>SQL</li></ul>
-                </div>
-                <div class="skill-group">
-                    <h4><i class="fas fa-layer-group"></i> Backend & AI</h4>
-                    <ul><li>Node.js</li><li>Microservices</li><li>MCP SDK</li><li>REST APIs</li><li>WebSockets</li></ul>
-                </div>
-                <div class="skill-group">
-                    <h4><i class="fas fa-cloud"></i> Infrastructure</h4>
-                    <ul><li>Docker</li><li>Kubernetes</li><li>AWS (EC2/S3)</li><li>Redis</li><li>PostgreSQL</li></ul>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section id="projects" class="projects-section">
       <div class="container">
-        <h2 class="section-title">Key Projects</h2>
-        <div class="project-grid-large">
-          <article class="project-main">
-            <div class="project-content">
-              <span class="tag">Flagship Project</span>
-              <h3>Full-Stack Fitness Analytics Platform</h3>
-              <p>A comprehensive MERN stack application featuring interactive progress charts. Optimized with Redis for session caching, reducing query response times significantly[cite: 23, 24, 25].</p>
+        <h2 class="section-title">Featured Work</h2>
+        <div class="project-grid">
+          <div class="project-card large">
+            <div class="project-info">
+              <span class="tag">MERN Stack</span>
+              <h3>Fitness Analytics Platform</h3>
+              <p>Full-stack tracking app with interactive charts. Integrated <strong>Redis</strong> for session caching, drastically reducing query response times.</p>
               <div class="tech-tags"><span>Node.js</span><span>React</span><span>MongoDB</span><span>Redis</span></div>
-              <a href="#" class="view-link">Case Study coming soon →</a>
             </div>
-          </article>
-
-          <article class="project-main">
-            <div class="project-content">
-              <span class="tag">Award Winning</span>
+          </div>
+          <div class="project-card large">
+            <div class="project-info">
+              <span class="tag">AI / IoT</span>
               <h3>IoT Plant Disease Classifier</h3>
-              <p>Mobile-controlled IoT system using CNN Machine Learning models to detect greenhouse plant diseases in real-time[cite: 26, 27].</p>
-              <div class="tech-tags"><span>Python</span><span>ML</span><span>Computer Vision</span><span>IoT</span></div>
+              <p>Awarded <strong>Best Project</strong>. Real-time mobile detection using <strong>CNN-based</strong> Machine Learning models.</p>
+              <div class="tech-tags"><span>Python</span><span>Computer Vision</span><span>Cloud</span></div>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact-section grey-bg">
-      <div class="container">
-        <div class="contact-box">
-            <h2>Start a Conversation</h2>
-            <p>Currently open to discussing innovative AI infrastructure and backend opportunities.</p>
-            <div class="contact-info">
-                <span><i class="fas fa-envelope"></i> vardhanbattula03@gmail.com</span>
-                <span><i class="fas fa-phone"></i> +91 6300962156</span>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-card">
+                <h2>Let's Build Something Great</h2>
+                <p>Seeking opportunities in high-scale backend systems and AI infrastructure.</p>
+                <div class="contact-links">
+                    <a href="mailto:vardhanbattula03@gmail.com" class="btn resume-btn">Email Me</a>
+                    <a href="https://wa.link/tn3tuu" class="btn btn-outline">WhatsApp</a>
+                </div>
             </div>
-            <a href="https://wa.link/tn3tuu" class="btn chat-btn">Message on WhatsApp</a>
         </div>
-      </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-content">
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/rohit-vardhan-battula-1a704a210/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/rohitvardhanbattula" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://twitter.com/RohitVardhan08" target="_blank"><i class="fab fa-twitter"></i></a>
+    <div class="container footer-flex">
+      <p>© 2026 Rohit Vardhan Battula</p>
+      <div class="social-links">
+        <a href="https://github.com/rohitvardhanbattula"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rohit-vardhan-battula-1a704a210/"><i class="fab fa-linkedin"></i></a>
       </div>
-      <p>© 2026 Rohit Vardhan Battula. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
